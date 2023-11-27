@@ -21,7 +21,7 @@
               {% for language in languages %}
                 <option
                   value="{{ language.acronym }}"
-                  {% if language.acronym == translate_form %} selected
+                  {% if language.acronym==translate_form %} selected
                   {% endif %}
                 > {{ language.name.upper() }}
                 </option>
@@ -33,6 +33,14 @@
           </div>
           <li class="row to">
             <select name="translate-to">
+              {% for language in languages %}
+                <option
+                  value="{{ language.acronym }}"
+                  {% if language.acronym==translate_form %} selected
+                  {% endif %}
+                > {{ language.name.upper() }}
+                </option>
+              {% endfor %}
             </select>
           </li>
         </ul>
