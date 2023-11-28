@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from deep_translator import GoogleTranslator
+
 from models.language_model import LanguageModel
 
 language_controller = Blueprint("language_controller", __name__)
